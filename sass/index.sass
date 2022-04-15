@@ -1,0 +1,46 @@
+@use 'vars' as *
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap')
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+img
+  object-fit: cover
+  width: 100%
+body
+  width: 100vw
+  height: 100vh
+  background-color: $light-gray
+  display: flex
+  justify-content: center
+  align-items: center
+
+.card
+  background-color: $white
+  padding: $p-2
+  width: 270px
+  height: 440px
+  border-radius: $font-size-base
+  box-shadow: 0 0 1rem $grayish-blue
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 1fr auto
+
+  &--image
+    border-radius: $font-size-base
+
+  &--content
+    font-family: $fontfamily
+    height: fit-content
+    
+    &--title
+      padding: .3rem ($p-2 - 1rem)
+      color: $dark-blue
+      font-weight: 700
+      text-align: center
+      font-size: $font-size-base * 1.4
+    &--description
+      text-align: center
+      padding: .2rem ($p-2 - 1rem)
+      color: $grayish-blue
